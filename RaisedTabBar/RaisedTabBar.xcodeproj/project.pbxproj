@@ -15,6 +15,14 @@
 		F2050F5121931332002D5A66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F5021931332002D5A66 /* main.m */; };
 		F2050F5B21931332002D5A66 /* RaisedTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F5A21931332002D5A66 /* RaisedTabBarTests.m */; };
 		F2050F6621931332002D5A66 /* RaisedTabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F6521931332002D5A66 /* RaisedTabBarUITests.m */; };
+		F2050F772193150A002D5A66 /* RaisedTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F762193150A002D5A66 /* RaisedTabBar.m */; };
+		F2050F7A2193174D002D5A66 /* RaisedTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F792193174D002D5A66 /* RaisedTabBarController.m */; };
+		F2050F7D21931FC7002D5A66 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F7C21931FC7002D5A66 /* AViewController.m */; };
+		F2050F8021931FD2002D5A66 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F7F21931FD2002D5A66 /* BViewController.m */; };
+		F2050F8321931FDC002D5A66 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8221931FDC002D5A66 /* CViewController.m */; };
+		F2050F8621931FE5002D5A66 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8521931FE5002D5A66 /* DViewController.m */; };
+		F2050F8921931FEE002D5A66 /* EViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8821931FEE002D5A66 /* EViewController.m */; };
+		F2050F8C219320A2002D5A66 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8B219320A2002D5A66 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,22 @@
 		F2050F6121931332002D5A66 /* RaisedTabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaisedTabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2050F6521931332002D5A66 /* RaisedTabBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaisedTabBarUITests.m; sourceTree = "<group>"; };
 		F2050F6721931332002D5A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2050F752193150A002D5A66 /* RaisedTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaisedTabBar.h; sourceTree = "<group>"; };
+		F2050F762193150A002D5A66 /* RaisedTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaisedTabBar.m; sourceTree = "<group>"; };
+		F2050F782193174D002D5A66 /* RaisedTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaisedTabBarController.h; sourceTree = "<group>"; };
+		F2050F792193174D002D5A66 /* RaisedTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaisedTabBarController.m; sourceTree = "<group>"; };
+		F2050F7B21931FC7002D5A66 /* AViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = "<group>"; };
+		F2050F7C21931FC7002D5A66 /* AViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
+		F2050F7E21931FD2002D5A66 /* BViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		F2050F7F21931FD2002D5A66 /* BViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		F2050F8121931FDC002D5A66 /* CViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
+		F2050F8221931FDC002D5A66 /* CViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
+		F2050F8421931FE5002D5A66 /* DViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
+		F2050F8521931FE5002D5A66 /* DViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
+		F2050F8721931FEE002D5A66 /* EViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EViewController.h; sourceTree = "<group>"; };
+		F2050F8821931FEE002D5A66 /* EViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EViewController.m; sourceTree = "<group>"; };
+		F2050F8A219320A2002D5A66 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F2050F8B219320A2002D5A66 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +125,23 @@
 		F2050F4021931330002D5A66 /* RaisedTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				F2050F74219314DE002D5A66 /* RaisedTabBar */,
 				F2050F4121931330002D5A66 /* AppDelegate.h */,
 				F2050F4221931330002D5A66 /* AppDelegate.m */,
+				F2050F8A219320A2002D5A66 /* RootViewController.h */,
+				F2050F8B219320A2002D5A66 /* RootViewController.m */,
 				F2050F4421931330002D5A66 /* ViewController.h */,
 				F2050F4521931330002D5A66 /* ViewController.m */,
+				F2050F7B21931FC7002D5A66 /* AViewController.h */,
+				F2050F7C21931FC7002D5A66 /* AViewController.m */,
+				F2050F7E21931FD2002D5A66 /* BViewController.h */,
+				F2050F7F21931FD2002D5A66 /* BViewController.m */,
+				F2050F8121931FDC002D5A66 /* CViewController.h */,
+				F2050F8221931FDC002D5A66 /* CViewController.m */,
+				F2050F8421931FE5002D5A66 /* DViewController.h */,
+				F2050F8521931FE5002D5A66 /* DViewController.m */,
+				F2050F8721931FEE002D5A66 /* EViewController.h */,
+				F2050F8821931FEE002D5A66 /* EViewController.m */,
 				F2050F4721931330002D5A66 /* Main.storyboard */,
 				F2050F4A21931332002D5A66 /* Assets.xcassets */,
 				F2050F4C21931332002D5A66 /* LaunchScreen.storyboard */,
@@ -130,6 +167,17 @@
 				F2050F6721931332002D5A66 /* Info.plist */,
 			);
 			path = RaisedTabBarUITests;
+			sourceTree = "<group>";
+		};
+		F2050F74219314DE002D5A66 /* RaisedTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F2050F752193150A002D5A66 /* RaisedTabBar.h */,
+				F2050F762193150A002D5A66 /* RaisedTabBar.m */,
+				F2050F782193174D002D5A66 /* RaisedTabBarController.h */,
+				F2050F792193174D002D5A66 /* RaisedTabBarController.m */,
+			);
+			path = RaisedTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +310,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2050F8621931FE5002D5A66 /* DViewController.m in Sources */,
+				F2050F8021931FD2002D5A66 /* BViewController.m in Sources */,
+				F2050F7D21931FC7002D5A66 /* AViewController.m in Sources */,
+				F2050F7A2193174D002D5A66 /* RaisedTabBarController.m in Sources */,
+				F2050F8921931FEE002D5A66 /* EViewController.m in Sources */,
 				F2050F4621931330002D5A66 /* ViewController.m in Sources */,
+				F2050F772193150A002D5A66 /* RaisedTabBar.m in Sources */,
+				F2050F8C219320A2002D5A66 /* RootViewController.m in Sources */,
 				F2050F5121931332002D5A66 /* main.m in Sources */,
+				F2050F8321931FDC002D5A66 /* CViewController.m in Sources */,
 				F2050F4321931330002D5A66 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

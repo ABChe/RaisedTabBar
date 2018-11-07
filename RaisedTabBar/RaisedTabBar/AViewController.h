@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AViewController.h
 //  RaisedTabBar
 //
 //  Created by 车 on 2018/11/7.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+NS_ASSUME_NONNULL_BEGIN
+
+@interface AViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
