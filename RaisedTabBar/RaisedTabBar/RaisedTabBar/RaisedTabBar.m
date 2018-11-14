@@ -9,19 +9,17 @@
 #import "RaisedTabBar.h"
 
 #define kRoundButtonRadius 30.f
-
 #define kRoundBorderWidth 5.f
-
 #define kTabBarDefaultHeight 49.f
 
+#define kRoundButtonBackgroundColor [UIColor redColor]
+#define kRoundButtonBorderColor [UIColor cyanColor].CGColor
+
 #define kiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-
 #define kiPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
-
 #define kiPhoneXS_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define kiPhoneX_Bottom_Height (kiPhoneX || kiPhoneXR || kiPhoneXS_Max ? 34 : 0)
-
 
 @implementation RaisedTabBar
 
@@ -59,7 +57,7 @@
             
             // 隐藏中间item
             if (index == ceil(self.items.count / 2)) {
-                view.hidden = YES;
+//                view.hidden = YES;
             }
             
             index++;
@@ -104,10 +102,10 @@
 - (UIButton *)roundButton {
     if (_roundButton == nil) {
         _roundButton = [[UIButton alloc] init];
-        _roundButton.backgroundColor = [UIColor redColor];
+        _roundButton.backgroundColor = kRoundButtonBackgroundColor;
         _roundButton.layer.cornerRadius = kRoundButtonRadius;
         _roundButton.layer.borderWidth = kRoundBorderWidth;
-        _roundButton.layer.borderColor = [UIColor purpleColor].CGColor;
+        _roundButton.layer.borderColor = kRoundButtonBorderColor;
         _roundButton.clipsToBounds = YES;
         [_roundButton addTarget:self action:@selector(clickRoundButton) forControlEvents:UIControlEventTouchUpInside];
     }

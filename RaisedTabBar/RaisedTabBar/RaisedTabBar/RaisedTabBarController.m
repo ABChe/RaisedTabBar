@@ -8,8 +8,11 @@
 
 #import "RaisedTabBarController.h"
 #import "RaisedTabBar.h"
+#import "RaisedTabBarItemModel.h"
 
 @interface RaisedTabBarController ()<RaisedTabBarDelegate>
+
+@property (nonatomic, strong) NSMutableArray<RaisedTabBarItemModel *> *itemModelArray;
 
 @end
 
@@ -19,28 +22,57 @@
 
 #pragma mark -
 
++ (void)initialize {
+    UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
+    
+    NSMutableDictionary *dictNormal = [NSMutableDictionary dictionary];
+    dictNormal[NSForegroundColorAttributeName] = [UIColor grayColor];
+    dictNormal[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    
+    NSMutableDictionary *dictSelected = [NSMutableDictionary dictionary];
+    dictSelected[NSForegroundColorAttributeName] = [UIColor redColor];
+    dictSelected[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    
+    [tabBarItem setTitleTextAttributes:dictNormal forState:UIControlStateNormal];
+    [tabBarItem setTitleTextAttributes:dictSelected forState:UIControlStateSelected];
+}
+
+- (instancetype)initWithItemModelArray:(NSArray<RaisedTabBarItemModel *> *)array {
+    if (self = [super init]) {
+        self.itemModelArray = [NSMutableArray arrayWithArray:array];
+        [self setChildViewControllers];
+        middleIndex = floor(self.itemModelArray.count / 2.f);
+        [self setSelectedIndex:middleIndex];
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setChildViewControllers];
-    
     RaisedTabBar *myTabBar = [[RaisedTabBar alloc] init];
     myTabBar.raisedDelegate = self;
     [self setValue:myTabBar forKey:@"tabBar"];
-    
-    middleIndex = ceil(self.tabBar.items.count / 2.f);
-    [self setSelectedIndex:middleIndex];
 }
 
 
 #pragma mark -
 
 - (void)setChildViewControllers {
-//    [self addChildViewControllerWithViewController:
-//                                             title:
-//                                             image:
-//                                     selectedImage: ];
+    [self.itemModelArray enumerateObjectsUsingBlock:^(RaisedTabBarItemModel *model, NSUInteger idx, BOOL * _Nonnull stop)
+    {
+        NSString *className = model.className;
+        Class class = NSClassFromString(className);
+        if (class) {
+            UIViewController *vc = class.new;
+            [self addChildViewControllerWithViewController:vc
+                                                     title:model.title
+                                                     image:model.imageName
+                                             selectedImage:model.selectedImageName];
+        }
+    }];
 }
 
 - (void)addChildViewControllerWithViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
@@ -56,8 +88,8 @@
 //    mySelectedImage = [mySelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    childController.tabBarItem.selectedImage = mySelectedImage;
     
-    childController.tabBarItem.title = title;
-    childController.navigationItem.title = title;
+    nav.tabBarItem.title = title;
+    childController.title = title;
     
     [self addChildViewController:nav];
 }

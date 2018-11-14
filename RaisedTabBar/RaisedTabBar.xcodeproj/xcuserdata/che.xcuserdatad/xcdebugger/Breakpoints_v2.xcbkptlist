@@ -9,14 +9,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaisedTabBar/RaisedTabBar/RaisedTabBarController.m"
-            timestampString = "563293299.257562"
+            filePath = "RaisedTabBar/RaisedTabBar/RaisedTabBar.m"
+            timestampString = "563877669.371419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-layoutSubviews"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RaisedTabBar layoutSubviews]"
+                  moduleName = "RaisedTabBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/che/Desktop/git_che/RaisedTabBar/RaisedTabBar/RaisedTabBar/RaisedTabBar/RaisedTabBar.m"
+                  timestampString = "563877549.273922"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "2027">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RaisedTabBar layoutSubviews]"
+                  moduleName = "RaisedTabBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/che/Desktop/git_che/RaisedTabBar/RaisedTabBar/RaisedTabBar/RaisedTabBar/RaisedTabBar.m"
+                  timestampString = "563877549.277415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "2035">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RaisedTabBar/RaisedTabBar/RaisedTabBarController.m"
-            timestampString = "563293299.257697"
+            timestampString = "563877669.371515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-addChildViewControllerWithViewController:title:image:selectedImage:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-initWithItemModelArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

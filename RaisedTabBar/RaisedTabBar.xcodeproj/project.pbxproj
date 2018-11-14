@@ -23,6 +23,7 @@
 		F2050F8621931FE5002D5A66 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8521931FE5002D5A66 /* DViewController.m */; };
 		F2050F8921931FEE002D5A66 /* EViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8821931FEE002D5A66 /* EViewController.m */; };
 		F2050F8C219320A2002D5A66 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2050F8B219320A2002D5A66 /* RootViewController.m */; };
+		F299899C219C049200C58824 /* RaisedTabBarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F299899B219C049200C58824 /* RaisedTabBarItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		F2050F8821931FEE002D5A66 /* EViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EViewController.m; sourceTree = "<group>"; };
 		F2050F8A219320A2002D5A66 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F2050F8B219320A2002D5A66 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F299899A219C049200C58824 /* RaisedTabBarItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaisedTabBarItemModel.h; sourceTree = "<group>"; };
+		F299899B219C049200C58824 /* RaisedTabBarItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaisedTabBarItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				F2050F762193150A002D5A66 /* RaisedTabBar.m */,
 				F2050F782193174D002D5A66 /* RaisedTabBarController.h */,
 				F2050F792193174D002D5A66 /* RaisedTabBarController.m */,
+				F299899A219C049200C58824 /* RaisedTabBarItemModel.h */,
+				F299899B219C049200C58824 /* RaisedTabBarItemModel.m */,
 			);
 			path = RaisedTabBar;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				F2050F7A2193174D002D5A66 /* RaisedTabBarController.m in Sources */,
 				F2050F8921931FEE002D5A66 /* EViewController.m in Sources */,
 				F2050F4621931330002D5A66 /* ViewController.m in Sources */,
+				F299899C219C049200C58824 /* RaisedTabBarItemModel.m in Sources */,
 				F2050F772193150A002D5A66 /* RaisedTabBar.m in Sources */,
 				F2050F8C219320A2002D5A66 /* RootViewController.m in Sources */,
 				F2050F5121931332002D5A66 /* main.m in Sources */,

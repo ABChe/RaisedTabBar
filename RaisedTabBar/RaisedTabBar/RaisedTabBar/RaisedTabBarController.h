@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class RaisedTabBarItemModel;
+
 @interface RaisedTabBarController : UITabBarController
+
+- (instancetype)initWithItemModelArray:(NSArray<RaisedTabBarItemModel *> *)array;
 
 - (void)addChildViewControllerWithViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 
