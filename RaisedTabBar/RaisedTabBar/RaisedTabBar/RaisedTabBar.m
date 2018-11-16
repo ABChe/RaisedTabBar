@@ -46,18 +46,26 @@
     
     Class class = NSClassFromString(@"UITabBarButton");
     NSInteger index = 0;
-    NSInteger itemWidth = CGRectGetWidth(self.bounds) / self.items.count;
+    NSInteger itemWidth = CGRectGetWidth(self.bounds) / ((self.items.count % 2) ? self.items.count : (self.items.count + 1));
     
     for (UIView *view in self.subviews) {
         if ([view isKindOfClass:class]) {
+            // 正常item位置
             CGRect rect = view.frame;
             rect.origin.x = index * itemWidth;
             rect.size.width = itemWidth;
             view.frame = rect;
             
-            // 隐藏中间item
-            if (index == ceil(self.items.count / 2)) {
+            // 隐藏中间item(用于roundButton点击显示VC, items应为奇数)
+//            if (index == ceil(self.items.count / 2)) {
 //                view.hidden = YES;
+//            }
+            
+            // 空出中间item位置(用于roundButton点击显示View, items应为偶数)
+            if (index == ceil(self.items.count / 2)) {
+                index++;
+                rect.origin.x = index * itemWidth;
+                view.frame = rect;
             }
             
             index++;

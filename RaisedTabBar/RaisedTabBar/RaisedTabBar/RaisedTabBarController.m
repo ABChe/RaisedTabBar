@@ -8,11 +8,13 @@
 
 #import "RaisedTabBarController.h"
 #import "RaisedTabBar.h"
-#import "RaisedTabBarItemModel.h"
+#import "AViewController.h"
+#import "BViewController.h"
+#import "CViewController.h"
+#import "DViewController.h"
+#import "EViewController.h"
 
 @interface RaisedTabBarController ()<RaisedTabBarDelegate>
-
-@property (nonatomic, strong) NSMutableArray<RaisedTabBarItemModel *> *itemModelArray;
 
 @end
 
@@ -37,42 +39,54 @@
     [tabBarItem setTitleTextAttributes:dictSelected forState:UIControlStateSelected];
 }
 
-- (instancetype)initWithItemModelArray:(NSArray<RaisedTabBarItemModel *> *)array {
-    if (self = [super init]) {
-        self.itemModelArray = [NSMutableArray arrayWithArray:array];
-        [self setChildViewControllers];
-        middleIndex = floor(self.itemModelArray.count / 2.f);
-        [self setSelectedIndex:middleIndex];
-    }
-    return self;
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     RaisedTabBar *myTabBar = [[RaisedTabBar alloc] init];
     myTabBar.raisedDelegate = self;
     [self setValue:myTabBar forKey:@"tabBar"];
+    
+    [self setChildViewControllers];
+    
+    middleIndex = floor(self.viewControllers.count / 2.f);
+    
+    [self setSelectedIndex:0];
+    
 }
 
 
 #pragma mark -
 
 - (void)setChildViewControllers {
-    [self.itemModelArray enumerateObjectsUsingBlock:^(RaisedTabBarItemModel *model, NSUInteger idx, BOOL * _Nonnull stop)
-    {
-        NSString *className = model.className;
-        Class class = NSClassFromString(className);
-        if (class) {
-            UIViewController *vc = class.new;
-            [self addChildViewControllerWithViewController:vc
-                                                     title:model.title
-                                                     image:model.imageName
-                                             selectedImage:model.selectedImageName];
-        }
-    }];
+    AViewController *aVC = [[AViewController alloc] init];
+    [self addChildViewControllerWithViewController:aVC
+                                             title:@"A"
+                                             image:@"aaa"
+                                     selectedImage:@"aaa"];
+    
+    BViewController *bVC = [[BViewController alloc] init];
+    [self addChildViewControllerWithViewController:bVC
+                                             title:@"B"
+                                             image:@"aaa"
+                                     selectedImage:@"aaa"];
+    
+    CViewController *cVC = [[CViewController alloc] init];
+    [self addChildViewControllerWithViewController:cVC
+                                             title:@"C"
+                                             image:@"aaa"
+                                     selectedImage:@"aaa"];
+    
+    DViewController *dVC = [[DViewController alloc] init];
+    [self addChildViewControllerWithViewController:dVC
+                                             title:@"D"
+                                             image:@"aaa"
+                                     selectedImage:@"aaa"];
+    
+//    EViewController *eVC = [[EViewController alloc] init];
+//    [self addChildViewControllerWithViewController:eVC
+//                                             title:@"E"
+//                                             image:@"aaa"
+//                                     selectedImage:@"aaa"];
 }
 
 - (void)addChildViewControllerWithViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
@@ -80,13 +94,11 @@
     
     childController.view.backgroundColor = [UIColor whiteColor];
     
-//    UIImage *myImage = [UIImage imageNamed:image];
-//    myImage = [myImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    childController.tabBarItem.image = myImage;
-//    
-//    UIImage *mySelectedImage = [UIImage imageNamed:selectedImage];
-//    mySelectedImage = [mySelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    childController.tabBarItem.selectedImage = mySelectedImage;
+    UIImage *myImage = [UIImage imageNamed:image];
+    childController.tabBarItem.image = myImage;
+    
+    UIImage *mySelectedImage = [UIImage imageNamed:selectedImage];
+    childController.tabBarItem.selectedImage = mySelectedImage;
     
     nav.tabBarItem.title = title;
     childController.title = title;
@@ -98,7 +110,8 @@
 #pragma mark -
 
 - (void)roundButtonClicked {
-    [self setSelectedIndex:middleIndex];
+    NSLog(@"%s", __func__);
+//    [self setSelectedIndex:middleIndex];
 }
 
 @end
