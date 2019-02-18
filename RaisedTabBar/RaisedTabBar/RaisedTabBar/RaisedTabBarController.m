@@ -82,11 +82,11 @@
                                              image:@"aaa"
                                      selectedImage:@"aaa"];
     
-//    EViewController *eVC = [[EViewController alloc] init];
-//    [self addChildViewControllerWithViewController:eVC
-//                                             title:@"E"
-//                                             image:@"aaa"
-//                                     selectedImage:@"aaa"];
+    EViewController *eVC = [[EViewController alloc] init];
+    [self addChildViewControllerWithViewController:eVC
+                                             title:@"E"
+                                             image:@"aaa"
+                                     selectedImage:@"aaa"];
 }
 
 - (void)addChildViewControllerWithViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
@@ -111,7 +111,7 @@
 
 - (void)roundButtonClicked {
     NSLog(@"%s", __func__);
-//    [self setSelectedIndex:middleIndex];
+    [self setSelectedIndex:middleIndex];
 }
 
 @end

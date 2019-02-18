@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "RaisedTabBarController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     RootViewController *rootVC = [[RootViewController alloc] init];
     
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    window.rootViewController = rootVC;
-    [window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = rootVC;
 
     return YES;
 }

@@ -41,8 +41,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     NSInteger centerX = CGRectGetWidth(self.bounds) / 2;
-    NSInteger cenyerY = CGRectGetHeight(self.bounds) / 2;
-    self.roundButton.frame = CGRectMake(centerX - kRoundButtonRadius,  cenyerY - kTabBarDefaultHeight / 2 - kRoundButtonRadius - kiPhoneX_Bottom_Height / 2, kRoundButtonRadius * 2, kRoundButtonRadius *2);
+    NSInteger centerY = CGRectGetHeight(self.bounds) / 2;
+    self.roundButton.frame = CGRectMake(centerX - kRoundButtonRadius,  centerY - kTabBarDefaultHeight / 2 - kRoundButtonRadius - kiPhoneX_Bottom_Height / 2, kRoundButtonRadius * 2, kRoundButtonRadius *2);
     
     Class class = NSClassFromString(@"UITabBarButton");
     NSInteger index = 0;
@@ -57,16 +57,16 @@
             view.frame = rect;
             
             // 隐藏中间item(用于roundButton点击显示VC, items应为奇数)
-//            if (index == ceil(self.items.count / 2)) {
-//                view.hidden = YES;
-//            }
+            if (index == ceil(self.items.count / 2)) {
+                view.hidden = YES;
+            }
             
             // 空出中间item位置(用于roundButton点击显示View, items应为偶数)
-            if (index == ceil(self.items.count / 2)) {
-                index++;
-                rect.origin.x = index * itemWidth;
-                view.frame = rect;
-            }
+//            if (index == ceil(self.items.count / 2)) {
+//                index++;
+//                rect.origin.x = index * itemWidth;
+//                view.frame = rect;
+//            }
             
             index++;
         }
